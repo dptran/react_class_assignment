@@ -1,25 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from "react"
+
+// function App() {
+//   const clickButton = () => {
+//     alert("Great Shot!");
+//   }
+
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <h1>Contact</h1>
+//         <p><button onClick={clickButton}>Take the shot!</button></p>
+//         <p><div id="counter">Counter: 0</div></p>
+//       </header>
+//     </div>
+//   );
+// }
 
 function App() {
+  const [count, setCount] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Contact</h1>
+      <p><button onClick={() => setCount(count + 1)}>Click Me</button></p>
+      <p>Count: {count}</p>
+    </>
   );
-}
+};
 
 export default App;
